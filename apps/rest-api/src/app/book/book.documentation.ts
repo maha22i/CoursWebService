@@ -16,10 +16,11 @@ export const bookExample: BookDto = {
   title: 'HARRY POTTE VOLUME 5',
   summary: "HARRY POTTER ET L'ORDRE DU PHÉNIX J.K. ROWLING",
   publicationDate: new Date('2017-02-01').toISOString(),
-  likeCoun: 100,
+  likeCount: 100,
 };
 
 export class ApiBookDto implements BookDto {
+  likeCount: number;
   likeCoun: number;
   @ApiProperty({ example: bookExample.id, type: String, pattern: '^[a-f0-]' })
   id: string;
@@ -32,7 +33,7 @@ export class ApiBookDto implements BookDto {
     format: 'date-time',
   })
   publicationDate: string;
-  @ApiProperty({ example: bookExample.likeCoun, type: Number, minimum: 0 })
+  @ApiProperty({ example: bookExample.likeCount, type: Number, minimum: 0 })
   Likecon: number;
 }
 

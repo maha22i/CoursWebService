@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 
 import { BookModule } from './book/book.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { AuthorModule } from './author/author.module';
 const username = 'mahami';
 const password = 'T5ubRfMoNTX9cETg';
 const host = 'cluster0.ejvhm.mongodb.net';
@@ -12,7 +13,7 @@ const mongoDbUri = `mongodb+srv://${username}:${password}@${host}/${databaseName
 //   useUnifiedTopology: true,
 // };
 @Module({
-  imports: [MongooseModule.forRoot(mongoDbUri), BookModule],
+  imports: [MongooseModule.forRoot(mongoDbUri), BookModule, AuthorModule],
   controllers: [],
   providers: [],
 })

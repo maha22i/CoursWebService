@@ -1,10 +1,10 @@
-import { EntityDocument } from '@library/api/repository/core';
+import { EntityDocument } from '@courswebservice/api/repository/core';
 import {
   CreateDto,
   Dto,
   ResetDto,
   UpdateDto,
-} from '@library/common/resource/core';
+} from '@courswebservice/common/resource/core';
 import { Document } from 'mongoose';
 
 export abstract class ApiAbstractMapper<

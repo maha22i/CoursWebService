@@ -15,14 +15,14 @@ export const bookDocumentToDto = (document: BookDocument): BookDto => ({
   title: document.title,
   summary: document.description,
   publicationDate: document.publication?.toISOString(),
-  Likecon: document.Likecon,
+  likeCount: document.Likecon,
 });
 
 export const bookCreateDtoToEntity = (dto: BookCreateDto): BookEntity => ({
   title: dto.title,
   description: dto.summary,
   publication: dto.publicationDate && new Date(dto.publicationDate),
-  Likecon: dto.Likecon,
+  Likecon: dto.likeCount,
 });
 
 export const bookUpdateDtoToEntity = (
@@ -32,7 +32,7 @@ export const bookUpdateDtoToEntity = (
   title: dto.title,
   description: dto.summary,
   publication: dto.publicationDate && new Date(dto.publicationDate),
-  Likecon: dto.Likecon,
+  Likecon: dto.likeCount,
 });
 
 export const bookResetDtoToEntity = (dto: BookUpdateDto): BookEntityWithId => ({
@@ -40,7 +40,7 @@ export const bookResetDtoToEntity = (dto: BookUpdateDto): BookEntityWithId => ({
   title: dto.title ?? null,
   description: dto.summary ?? null,
   publication: dto.publicationDate ? new Date(dto.publicationDate) : null,
-  Likecon: dto.Likecon ?? null,
+  Likecon: dto.likeCount ?? null,
 });
 
 @Injectable()

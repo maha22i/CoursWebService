@@ -31,7 +31,10 @@ export class BookValidationDto implements BookDto {
 
 export class BookCreateValidationDto
   extends CreateValidationDtoFactory(BookValidationDto)
-  implements BookCreateDto {}
+  implements BookCreateDto
+{
+  likeCoun: number;
+}
 export class BookUpdateValidationDto
   extends UpdateValidationDtoFactory(BookValidationDto)
   implements BookUpdateDto {}

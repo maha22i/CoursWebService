@@ -10,7 +10,7 @@ export interface BookDto extends Dto {
   title: string;
   summary: string;
   publicationDate: string;
-  likeCoun: number;
+  likeCount: number;
 }
 
 export type BookCreateDto = CreateDto<BookDto>;

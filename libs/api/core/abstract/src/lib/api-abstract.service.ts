@@ -5,7 +5,7 @@ import {
   ResetDto,
   UpdateDto,
   Dto,
-} from '@courswebservice/api/repository/core';
+} from '@courswebservice/common/resource/core';
 import { ApiAbstractMapper } from '..';
 import { Model } from 'mongoose';
 export abstract class ApiAbstractService<
@@ -71,7 +71,7 @@ export abstract class ApiAbstractService<
       .catch(handleDocumentNotFound);
   }
 
-  remove(id: string): Promise<void> {
+  remove(id: string) {
     return this.model
       .deleteOne({ _id: id })
       .orFail()
