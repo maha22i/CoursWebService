@@ -1,0 +1,23 @@
+{
+  "root": "libs/api/core/abstract",
+  "sourceRoot": "libs/api/core/abstract/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/core/abstract/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/core/abstract"],
+      "options": {
+        "jestConfig": "libs/api/core/abstract/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,4 +1,15 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "api-core-abstract": "libs/api/core/abstract",
+    "api-documentation-core": "libs/api/documentation/core",
+    "api-repository-core": "libs/api/repository/core",
+    "api-repository-error": "libs/api/repository/error",
+    "api-validation-core": "libs/api/validation/core",
+    "api-validation-id": "libs/api/validation/id",
+    "common-resource-author": "libs/common/resource/author",
+    "common-resource-book": "libs/common/resource/book",
+    "common-resource-core": "libs/common/resource/core",
+    "rest-api": "apps/rest-api"
+  }
 }

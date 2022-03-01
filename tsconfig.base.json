@@ -14,7 +14,38 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@courswebservice/api/core/abstract": [
+        "libs/api/core/abstract/src/index.ts"
+      ],
+      "@courswebservice/api/documentation/core": [
+        "libs/api/documentation/core/src/index.ts"
+      ],
+      "@courswebservice/api/error/repository": [
+        "libs/api/error/repository/src/index.ts"
+      ],
+      "@courswebservice/api/repository/core": [
+        "libs/api/repository/core/src/index.ts"
+      ],
+      "@courswebservice/api/repository/error": [
+        "libs/api/repository/error/src/index.ts"
+      ],
+      "@courswebservice/api/validation/core": [
+        "libs/api/validation/core/src/index.ts"
+      ],
+      "@courswebservice/api/validation/id": [
+        "libs/api/validation/id/src/index.ts"
+      ],
+      "@courswebservice/common/resource/author": [
+        "libs/common/resource/author/src/index.ts"
+      ],
+      "@courswebservice/common/resource/book": [
+        "libs/common/resource/book/src/index.ts"
+      ],
+      "@courswebservice/common/resource/core": [
+        "libs/common/resource/core/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

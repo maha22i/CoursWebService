@@ -1,0 +1,23 @@
+{
+  "root": "libs/api/repository/error",
+  "sourceRoot": "libs/api/repository/error/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/repository/error/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/repository/error"],
+      "options": {
+        "jestConfig": "libs/api/repository/error/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

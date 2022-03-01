@@ -1,0 +1,23 @@
+{
+  "root": "libs/common/resource/author",
+  "sourceRoot": "libs/common/resource/author/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/common/resource/author/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/common/resource/author"],
+      "options": {
+        "jestConfig": "libs/common/resource/author/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,23 @@
+{
+  "root": "libs/common/resource/book",
+  "sourceRoot": "libs/common/resource/book/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/common/resource/book/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/common/resource/book"],
+      "options": {
+        "jestConfig": "libs/common/resource/book/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
