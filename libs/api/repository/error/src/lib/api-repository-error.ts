@@ -1,4 +1,4 @@
-import { NotFoundException } from '@nestjs/common';
+import { ApiResourceNotFoundException } from '@courswebservice/api/core/error';
 import { Error } from 'mongoose';
 
 export function apiRepositoryError(): string {
@@ -7,7 +7,7 @@ export function apiRepositoryError(): string {
 
 export const handleDocumentNotFound = (error: Error): never => {
   if (error instanceof Error.DocumentNotFoundError) {
-    throw new NotFoundException();
+    throw new ApiResourceNotFoundException();
   }
   throw error;
 };

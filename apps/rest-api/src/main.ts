@@ -3,6 +3,7 @@
  * This is only a minimal backend to get started.
  */
 
+import { apiPathPrefix } from '@courswebservice/common/resource/core';
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
@@ -11,7 +12,7 @@ import { AppModule } from './app/app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const globalPrefix = 'api';
+  const globalPrefix = apiPathPrefix;
   app.setGlobalPrefix(globalPrefix);
 
   const config = new DocumentBuilder()

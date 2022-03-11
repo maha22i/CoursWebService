@@ -1,0 +1,23 @@
+{
+  "root": "libs/api/core/pagination",
+  "sourceRoot": "libs/api/core/pagination/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/core/pagination/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/core/pagination"],
+      "options": {
+        "jestConfig": "libs/api/core/pagination/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

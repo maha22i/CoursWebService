@@ -18,6 +18,10 @@
       "@courswebservice/api/core/abstract": [
         "libs/api/core/abstract/src/index.ts"
       ],
+      "@courswebservice/api/core/error": ["libs/api/core/error/src/index.ts"],
+      "@courswebservice/api/core/pagination": [
+        "libs/api/core/pagination/src/index.ts"
+      ],
       "@courswebservice/api/documentation/core": [
         "libs/api/documentation/core/src/index.ts"
       ],
@@ -36,6 +40,9 @@
       "@courswebservice/api/validation/id": [
         "libs/api/validation/id/src/index.ts"
       ],
+      "@courswebservice/api/validation/pagination": [
+        "libs/api/validation/pagination/src/index.ts"
+      ],
       "@courswebservice/common/resource/author": [
         "libs/common/resource/author/src/index.ts"
       ],
@@ -44,6 +51,9 @@
       ],
       "@courswebservice/common/resource/core": [
         "libs/common/resource/core/src/index.ts"
+      ],
+      "@courswebservice/common/resource/error": [
+        "libs/common/resource/error/src/index.ts"
       ]
     }
   },

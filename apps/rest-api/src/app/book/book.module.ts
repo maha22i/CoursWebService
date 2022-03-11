@@ -9,7 +9,7 @@ import { BookMapper } from './book.mapper';
   imports: [
     MongooseModule.forFeature([
       {
-        name: BookEntity.collectionName,
+        name: BookEntity.name,
         schema: BookSchema,
       },
     ]),

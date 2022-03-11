@@ -1,17 +1,20 @@
+// import { ApiResourceIdSendInvalidException } from '@courswebservice/api/core/error';
+import { ApiResourceIdSendInvalidException } from '@courswebservice/api/core/error';
 import {
   ArgumentMetadata,
   BadRequestException,
   Injectable,
   PipeTransform,
 } from '@nestjs/common';
-// import { Types } from 'mongoose';
+import { registerDecorator, ValidationOptions } from 'class-validator';
+import { Types } from 'mongoose';
 import { isObjectId } from './is-object-id.util';
 
 const checkObjectId = (value: string): string => {
   if (isObjectId(value)) {
     return value;
   }
-  throw new BadRequestException();
+  throw new ApiResourceIdSendInvalidException();
 };
 
 @Injectable()
